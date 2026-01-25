@@ -24,6 +24,7 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
+    "https://civitai.com/api/download/models/2260110?type=Model&format=SafeTensor&size=pruned&fp=fp8"
 )
 
 UNET_MODELS=(
