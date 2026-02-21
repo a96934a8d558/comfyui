@@ -21,10 +21,15 @@ PIP_PACKAGES=(
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/2260110?type=Model&format=SafeTensor&size=pruned&fp=fp8"
+    # 1. Pony Diffusion V6 XL (현존 무검열/포즈 이해도 1위. 콘티용 필수)
+    "https://civitai.com/api/download/models/290640?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+    # 2. RealVisXL V5.0 (실사형 콘티 뽑을 때 가장 안정적임)
+    "https://civitai.com/api/download/models/643110?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 UNET_MODELS=(
@@ -32,6 +37,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    # 인물 표정이나 디테일을 살려주는 로라 하나 정도 추가
+    "https://civitai.com/api/download/models/135867?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
 )
 
 VAE_MODELS=(
@@ -41,6 +48,9 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    # 콘티 작업 시 사진/스케치에서 포즈 따올 때 필수 (Canny, Depth)
+    "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/xinsir/controlnet-depth-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
